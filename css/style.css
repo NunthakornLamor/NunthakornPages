@@ -20,7 +20,7 @@
   }
   
   .header {
-    background-color: #9933cc;
+    background-color: #252525;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -162,7 +162,10 @@
   }
 
   .write {
-    animation: none;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    white-space: nowrap; /* Keeps the content on a single line */
+    animation: 
+      typinglow 5s steps(60, end) infinite;
   }
 
   .main-row {
@@ -204,7 +207,11 @@
   /* The typing effect */
   @keyframes typing {
     from { width: 0 }
-    to { width: 100% }
+    to { width: 150% }
+  }
+  @keyframes typinglow {
+    from { width: 0 }
+    to { width: 80% }
   }
   
   /* For mobile phones: */
@@ -264,7 +271,7 @@
     
       .main h2{
         margin-top: 0;
-        font-size: 200%;
+        font-size: 100%;
     
       }
     /* For tablets: */
@@ -331,7 +338,7 @@
     
       .main h2{
         margin-top: 0;
-        font-size: 200%;
+        font-size: 120%;
     
       }
     .col-1 {width: 8.33%;}
@@ -346,6 +353,20 @@
     .col-10 {width: 83.33%;}
     .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}
+  }
+
+  @media only screen and (min-width: 970px) {
+    .main h2{
+        margin-top: 0;
+        font-size: 150%;
+      }
+  }
+
+  @media only screen and (min-width: 1285px) {
+    .main h2{
+        margin-top: 0;
+        font-size: 200%;
+      }
   }
 
   .gradient {
