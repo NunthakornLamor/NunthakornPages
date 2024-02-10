@@ -54,20 +54,24 @@
     margin: 0;
     margin-top: 15%;
     padding: 0;
+    border-right: 1px solid #ffffff;
   }
   
   .menu li {
-    border-radius: 50px;
+    font-size: 100%;
+    border-radius: 10px;
+    width: 80%;
     padding: 8px;
     text-align: center;
     margin-bottom: 7px;
-    color: #ffffff;
-    border: 1px solid #ffffff;
+    color: #c1c1c1;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   }
   
   .menu li:hover {
-    background-color: #ffffff;
+    background-color: #c1c1c1;
+    color: #000;
+    cursor: pointer;
   }
   
   .aside {
@@ -81,11 +85,32 @@
   
   .footer {
     background-color: #0099cc;
-    color: #ffffff;
-    text-align: center;
+    color: #000000;
     font-size: 12px;
     padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0%;
   }
+
+  .footer h1{
+    margin-bottom: 2%;
+  }
+
+  .footer-item {
+    display: flex;
+    gap: 8%;
+    padding: 4%;
+  }
+  
+
+  .footer a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+  }
+
 
   .main{
     color: white;
@@ -130,11 +155,16 @@
   }
 
   @media only screen and (min-width: 600px) {
+    .footer {
+        gap: 20%;
+        flex-direction: row;
+        align-items: start;
+      }
     .write {
         overflow: hidden; /* Ensures the content is not revealed until the animation */
         white-space: nowrap; /* Keeps the content on a single line */
         animation: 
-          typing 8s steps(60, end) infinite;
+          typing 5s steps(60, end) infinite;
       }
     .main{
         color: white;
@@ -177,11 +207,21 @@
   }
   @media only screen and (min-width: 768px) {
     /* For desktop: */
+    .footer {
+        background-color: #0099cc;
+        font-size: 12px;
+        padding: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        flex-direction: row;
+        gap: 20%;
+    }
     .write {
         overflow: hidden; /* Ensures the content is not revealed until the animation */
         white-space: nowrap; /* Keeps the content on a single line */
         animation: 
-          typing 8s steps(60, end) infinite;
+          typing 5s steps(60, end) infinite;
       }
     .main{
         color: white;
