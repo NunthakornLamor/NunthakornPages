@@ -1,6 +1,8 @@
+
 * {
     box-sizing: border-box;
   }
+
   
   .row::after {
     content: "";
@@ -14,35 +16,62 @@
   }
   
   html {
-    font-family: "Lucida Sans", sans-serif;
+    font-family: "Heebo", sans-serif;
   }
   
   .header {
     background-color: #9933cc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3%;
     color: #ffffff;
-    padding: 15px;
+  }
+
+  .header .logo {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10%;
+    margin-left: 10vh;
+  }
+
+  .header .about-me{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+  }
+
+  .background{
+    width: 100%;
+    background-color: black;
   }
   
   .menu ul {
     list-style-type: none;
     margin: 0;
+    margin-top: 15%;
     padding: 0;
   }
   
   .menu li {
+    border-radius: 50px;
     padding: 8px;
+    text-align: center;
     margin-bottom: 7px;
-    background-color: #33b5e5;
     color: #ffffff;
+    border: 1px solid #ffffff;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   }
   
   .menu li:hover {
-    background-color: #0099cc;
+    background-color: #ffffff;
   }
   
   .aside {
-    background-color: #33b5e5;
+    /* background-color: #33b5e5; */
     padding: 15px;
     color: #ffffff;
     text-align: center;
@@ -57,13 +86,81 @@
     font-size: 12px;
     padding: 15px;
   }
+
+  .main{
+    color: white;
+    margin-top: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .main h1{
+    font-size: 150%;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .main h3{
+    font-size: 250%;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .main h2{
+    margin-top: 0;
+    font-size: 100%;
+
+  }
+
+  .write {
+    animation: none;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
   
   /* For mobile phones: */
   [class*="col-"] {
     width: 100%;
   }
-  
+
   @media only screen and (min-width: 600px) {
+    .write {
+        overflow: hidden; /* Ensures the content is not revealed until the animation */
+        white-space: nowrap; /* Keeps the content on a single line */
+        animation: 
+          typing 8s steps(60, end) infinite;
+      }
+    .main{
+        color: white;
+        margin-top: 3%;
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        flex-direction: column;
+      }
+    .main h1{
+        font-size: 250%;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    
+      .main h3{
+        font-size: 350%;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    
+      .main h2{
+        margin-top: 0;
+        font-size: 200%;
+    
+      }
     /* For tablets: */
     .col-s-1 {width: 8.33%;}
     .col-s-2 {width: 16.66%;}
@@ -80,6 +177,37 @@
   }
   @media only screen and (min-width: 768px) {
     /* For desktop: */
+    .write {
+        overflow: hidden; /* Ensures the content is not revealed until the animation */
+        white-space: nowrap; /* Keeps the content on a single line */
+        animation: 
+          typing 8s steps(60, end) infinite;
+      }
+    .main{
+        color: white;
+        margin-top: 3%;
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        flex-direction: column;
+      }
+    .main h1{
+        font-size: 250%;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    
+      .main h3{
+        font-size: 350%;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    
+      .main h2{
+        margin-top: 0;
+        font-size: 200%;
+    
+      }
     .col-1 {width: 8.33%;}
     .col-2 {width: 16.66%;}
     .col-3 {width: 25%;}
@@ -92,4 +220,12 @@
     .col-10 {width: 83.33%;}
     .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}
+  }
+
+  .gradient {
+    background: #121FCF;
+background: linear-gradient(to right, #55b0fb 0%, #c546e4 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+
   }
