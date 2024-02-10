@@ -22,9 +22,9 @@
   .header {
     background-color: #9933cc;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    gap: 3%;
+    gap: 5%;
     color: #ffffff;
   }
 
@@ -36,12 +36,32 @@
     margin-left: 10vh;
   }
 
-  .header .about-me{
-    width: 20%;
+  .about-me {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10%;
+    gap: 5%;
+    padding: 1%;
+    border-radius: 10px;
+    align-items: center !important;
+    justify-content: center !important;
+    background: linear-gradient(to right, #FFF 20%, rgb(216, 216, 216) 40%, rgb(199, 199, 199) 60%, #FFF 80%);
+    background-size: 200% auto;
+    animation: shine 3s linear infinite;
+    
+  }
+  @keyframes shine {
+    to {
+    background-position: 200% center;
+    }
+    }
+  .about-me :hover{
+    cursor: pointer;
+  }
+
+  .about-me a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    width: 120px;
+
   }
 
   .background{
@@ -54,7 +74,8 @@
     margin: 0;
     margin-top: 15%;
     padding: 0;
-    border-right: 1px solid #ffffff;
+    border-right: none;
+    border-bottom: 1px solid #ffffff;
   }
   
   .menu li {
@@ -84,7 +105,7 @@
   }
   
   .footer {
-    background-color: #0099cc;
+    background-color: #ffffff;
     color: #000000;
     font-size: 12px;
     padding: 15px;
@@ -100,11 +121,12 @@
   }
 
   .footer-item {
+    width: 100%;
     display: flex;
     gap: 8%;
     padding: 4%;
   }
-  
+
 
   .footer a{
     text-decoration: none;
@@ -142,7 +164,43 @@
   .write {
     animation: none;
   }
-  
+
+  .main-row {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .card-wrap {
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+    flex-direction: column;
+  }
+
+  .card {
+    margin-bottom: 20%;
+    background-color: #101010;
+    border-radius: 20px;
+    width: 50vw;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .card:hover {
+    transform: scale(1.1);
+  }
+
+  .card h2{
+    padding: 5%;
+  }
   /* The typing effect */
   @keyframes typing {
     from { width: 0 }
@@ -155,6 +213,24 @@
   }
 
   @media only screen and (min-width: 600px) {
+    .about-me {
+        padding: 0.5%;
+    }
+    .menu ul{
+        border-right: 1px solid #ffffff;
+        border-bottom: none;
+    }
+    .card-wrap {
+        flex-direction: row;
+      }
+      .card {
+        width: 30vw;
+        height: 40vh;
+        margin-bottom: 5%;
+      }
+    .header {
+        gap: 25%;
+    }
     .footer {
         gap: 20%;
         flex-direction: row;
@@ -207,8 +283,18 @@
   }
   @media only screen and (min-width: 768px) {
     /* For desktop: */
+    .menu ul{
+        border-right: 1px solid #ffffff;
+        border-bottom: none;
+    }
+    .card-wrap {
+        flex-direction: row;
+      }
+      .card {
+        width: 20vw;
+        height: 40vh;
+      }
     .footer {
-        background-color: #0099cc;
         font-size: 12px;
         padding: 15px;
         display: flex;
