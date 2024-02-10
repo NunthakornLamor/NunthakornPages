@@ -20,7 +20,7 @@
   }
   
   .header {
-    background-color: #9933cc;
+    background-color: #252525;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -77,6 +77,11 @@
     border-right: none;
     border-bottom: 1px solid #ffffff;
   }
+
+  .active {
+    background-color: #c1c1c1;
+    color: #000 !important;
+  }
   
   .menu li {
     font-size: 100%;
@@ -97,11 +102,27 @@
   
   .aside {
     /* background-color: #33b5e5; */
-    padding: 15px;
+    padding: 10px;
     color: #ffffff;
-    text-align: center;
     font-size: 14px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    background-color: #252525;
+    border-radius: 10px;
+    margin-top: 10%;
+  }
+
+  .aside h2 {
+    margin-left: 3%;
+  }
+
+  .aside p {
+    padding: 3%;
+  }
+
+  .aside p:hover {
+    border-left: 3px solid #c546e4;
+    cursor: pointer;
+
   }
   
   .footer {
@@ -162,8 +183,16 @@
   }
 
   .write {
-    animation: none;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    white-space: nowrap; /* Keeps the content on a single line */
+    animation: 
+      typinglow 5s steps(60, end) infinite;
   }
+
+  .main-card{
+    margin-top: 10%;
+  }
+
 
   .main-row {
     color: white;
@@ -198,13 +227,18 @@
     transform: scale(1.1);
   }
 
+
   .card h2{
     padding: 5%;
   }
   /* The typing effect */
   @keyframes typing {
     from { width: 0 }
-    to { width: 100% }
+    to { width: 150% }
+  }
+  @keyframes typinglow {
+    from { width: 0 }
+    to { width: 80% }
   }
   
   /* For mobile phones: */
@@ -213,6 +247,10 @@
   }
 
   @media only screen and (min-width: 600px) {
+    .fixed {
+        top: 20px; 
+        position: sticky;
+      }
     .about-me {
         padding: 0.5%;
     }
@@ -264,7 +302,7 @@
     
       .main h2{
         margin-top: 0;
-        font-size: 200%;
+        font-size: 100%;
     
       }
     /* For tablets: */
@@ -331,7 +369,7 @@
     
       .main h2{
         margin-top: 0;
-        font-size: 200%;
+        font-size: 120%;
     
       }
     .col-1 {width: 8.33%;}
@@ -346,6 +384,20 @@
     .col-10 {width: 83.33%;}
     .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}
+  }
+
+  @media only screen and (min-width: 970px) {
+    .main h2{
+        margin-top: 0;
+        font-size: 150%;
+      }
+  }
+
+  @media only screen and (min-width: 1285px) {
+    .main h2{
+        margin-top: 0;
+        font-size: 200%;
+      }
   }
 
   .gradient {
