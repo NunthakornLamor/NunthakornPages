@@ -77,6 +77,11 @@
     border-right: none;
     border-bottom: 1px solid #ffffff;
   }
+
+  .active {
+    background-color: #c1c1c1;
+    color: #000 !important;
+  }
   
   .menu li {
     font-size: 100%;
@@ -97,11 +102,27 @@
   
   .aside {
     /* background-color: #33b5e5; */
-    padding: 15px;
+    padding: 10px;
     color: #ffffff;
-    text-align: center;
     font-size: 14px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    background-color: #252525;
+    border-radius: 10px;
+    margin-top: 10%;
+  }
+
+  .aside h2 {
+    margin-left: 3%;
+  }
+
+  .aside p {
+    padding: 3%;
+  }
+
+  .aside p:hover {
+    border-left: 3px solid #c546e4;
+    cursor: pointer;
+
   }
   
   .footer {
@@ -168,6 +189,11 @@
       typinglow 5s steps(60, end) infinite;
   }
 
+  .main-card{
+    margin-top: 10%;
+  }
+
+
   .main-row {
     color: white;
     display: flex;
@@ -201,6 +227,7 @@
     transform: scale(1.1);
   }
 
+
   .card h2{
     padding: 5%;
   }
@@ -220,6 +247,10 @@
   }
 
   @media only screen and (min-width: 600px) {
+    .fixed {
+        top: 20px; 
+        position: sticky;
+      }
     .about-me {
         padding: 0.5%;
     }
