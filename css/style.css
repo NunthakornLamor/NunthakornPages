@@ -43,7 +43,7 @@
     border-radius: 10px;
     align-items: center !important;
     justify-content: center !important;
-    background: linear-gradient(to right, #FFF 20%, rgb(216, 216, 216) 40%, rgb(199, 199, 199) 60%, #FFF 80%);
+    background: linear-gradient(to right, #f4f4f4 20%, rgb(204, 187, 187) 40%, #f4f4f4 60%, #FFF 80%);
     background-size: 200% auto;
     animation: shine 3s linear infinite;
     
@@ -231,6 +231,7 @@
   .card h2{
     padding: 5%;
   }
+
   /* The typing effect */
   @keyframes typing {
     from { width: 0 }
@@ -240,6 +241,26 @@
     from { width: 0 }
     to { width: 80% }
   }
+
+  /* SHOWCASE PAGE PROPERTY */
+  .project-info {
+    margin-top: 3%;
+  }
+
+  .project-info p{
+    text-indent: 10%;
+    margin-top: 0;
+    margin-bottom: 5%;
+  }
+
+  .project-info h2{
+    margin-bottom: 2%;
+  }
+
+  hr.solid {
+    border-top: 2px solid #bbb;
+  }
+
   
   /* For mobile phones: */
   [class*="col-"] {
