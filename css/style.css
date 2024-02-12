@@ -211,12 +211,12 @@
     flex-direction: column;
   }
 
+  
   .card {
     margin-bottom: 20%;
-    background-color: #101010;
+    background-color: #1d1d1d;
     border-radius: 20px;
     width: 50vw;
-    height: 40vh;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -225,8 +225,17 @@
     transition: transform 0.3s ease-in-out;
   }
 
+  .grey{
+    background-color: rgb(41, 41, 41);
+  }
+
+
   .card:hover {
     transform: scale(1.1);
+  }
+
+  .card h2{
+    color: #cbe2ff;
   }
 
 
@@ -326,11 +335,10 @@
     .card-wrap {
         flex-direction: row;
       }
-      .card {
-        width: 30vw;
-        height: 40vh;
-        margin-bottom: 5%;
-      }
+    .card {
+      width: 30vw;
+      margin-bottom: 5%;
+    }
     .header {
         gap: 25%;
     }
@@ -396,7 +404,6 @@
       .card {
         width: 20vw;
         min-width: 200px;
-        height: 40vh;
       }
     .footer {
         font-size: 12px;
