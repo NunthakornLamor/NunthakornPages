@@ -33,7 +33,6 @@
     justify-content: start;
     align-items: center;
     gap: 10%;
-    margin-left: 10vh;
   }
 
   .about-me {
@@ -174,19 +173,18 @@
     font-size: 250%;
     margin-top: 0;
     margin-bottom: 0;
+    text-align: center;
   }
 
   .main h2{
     margin-top: 0;
     font-size: 100%;
-
+    text-align: center;
   }
 
   .write {
     overflow: hidden; /* Ensures the content is not revealed until the animation */
-    white-space: nowrap; /* Keeps the content on a single line */
-    animation: 
-      typinglow 5s steps(60, end) infinite;
+    animation: none;
   }
 
   .main-card{
@@ -228,7 +226,7 @@
   }
 
 
-  .card h2{
+  .card h2, .card p{
     padding: 5%;
   }
 
@@ -297,9 +295,8 @@
       }
     .write {
         overflow: hidden; /* Ensures the content is not revealed until the animation */
-        white-space: nowrap; /* Keeps the content on a single line */
-        animation: 
-          typing 5s steps(60, end) infinite;
+        white-space: nowrap;
+        animation: typing 5s steps(60, end) infinite;
       }
     .main{
         color: white;
@@ -315,16 +312,17 @@
         margin-bottom: 0;
       }
     
-      .main h3{
+    .main h3{
         font-size: 350%;
         margin-top: 0;
         margin-bottom: 0;
+        text-align: start;
       }
     
       .main h2{
         margin-top: 0;
         font-size: 100%;
-    
+        text-align: start;
       }
     /* For tablets: */
     .col-s-1 {width: 8.33%;}
@@ -351,6 +349,7 @@
       }
       .card {
         width: 20vw;
+        min-width: 200px;
         height: 40vh;
       }
     .footer {
@@ -407,14 +406,14 @@
     .col-12 {width: 100%;}
   }
 
-  @media only screen and (min-width: 970px) {
+  @media only screen and (min-width: 1060px) {
     .main h2{
         margin-top: 0;
         font-size: 150%;
       }
   }
 
-  @media only screen and (min-width: 1285px) {
+  @media only screen and (min-width: 1370px) {
     .main h2{
         margin-top: 0;
         font-size: 200%;
