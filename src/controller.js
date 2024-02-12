@@ -9,3 +9,7 @@ function scrollToSection(sectionId) {
       // window.scrollTo({ top: section.offsetTop, behavior: 'smooth' });
     }
   }
+
+function redirectTo(page) {
+    window.location.href = page;
+}

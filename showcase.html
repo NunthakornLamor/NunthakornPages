@@ -13,14 +13,14 @@
 
 <div class="background">
     <div class="header">
-        <div class="logo">
+        <div class="logo" onclick="redirectTo('./index.html')">
             <image src="images/logo.png" style="width: 40px;"></image>
             <h2> Portfolio</h2>
         </div>
         <div class="about-me">
 
                 <image src="images/githublogo.png" style="width: 30px;height: 30px;"></image>
-                <a href="#">Visit My Github</a>
+                <a href="https://github.com/NunthakornLamor">Visit My Github</a>
 
         </div>
     </div>
@@ -30,9 +30,9 @@
         <center>
         <ul>
           <li class="active">Showcase</li>
-          <li>TU Life</li>
-          <li>Resume</li>
-          <li>Contact</li>
+          <li onclick="redirectTo('./tulife.html')">TU Life</li>
+          <li onclick="redirectTo('./resume.html')">Resume</li>
+          <li onclick="scrollToSection('footer')">Contact</li>
         </ul>
         </center>
       </div>
@@ -68,7 +68,7 @@
               <image src="images/cs299-4.png" style="width: 100%;"></image>
               <div class="project-info">
                 <h2>Build Assets</h2> 
-                <p>These are all models added to the project. All the models were made by Inkrak through Blender.</p>
+                <p>These are all models added to the project. All the models were made by Inkrak through Blender. <a href="https://github.com/uninrk">click to see her repository.</a></p>
               </div>
             </div>
             <section id="section2"></section>
@@ -88,7 +88,7 @@
     
 
 </div>
-
+<section id="footer"></section>
 <div class="footer">
   <div class="contact">
     <h1>Contact me</h1>
