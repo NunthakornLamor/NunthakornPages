@@ -13,14 +13,14 @@
 
 <div class="background">
     <div class="header">
-        <div class="logo">
+        <div class="logo" onclick="redirectTo('./index.html')">
             <image src="images/logo.png" style="width: 40px;"></image>
             <h2> Portfolio</h2>
         </div>
         <div class="about-me">
 
                 <image src="images/githublogo.png" style="width: 30px;height: 30px;"></image>
-                <a href="#">Visit My Github</a>
+                <a href="https://github.com/NunthakornLamor">Visit My Github</a>
 
         </div>
     </div>
@@ -30,9 +30,9 @@
         <center>
         <ul>
           <li class="active">Showcase</li>
-          <li>TU Life</li>
-          <li>Resume</li>
-          <li>Contact</li>
+          <li onclick="redirectTo('./tulife.html')">TU Life</li>
+          <li onclick="redirectTo('./resume.html')">Resume</li>
+          <li onclick="scrollToSection('footer')">Contact</li>
         </ul>
         </center>
       </div>
@@ -43,13 +43,17 @@
 
             <section id="section1"></section>
             <div class="main-card">
-              <h2 class="gradient">Aquatic Rush - Interactive web development game using WebGL.</h2>
+              <h2 class="gradient topic">Aquatic Rush - Interactive web development game using WebGL, TreeJS.</h2>
+              <div class="btn-flex">
+                <a class="such-a-btn" href="https://yakormud.github.io/AquaticRush/">Demo View</a>
+              </div>
+              <p class="marks">Please note that: "The demo view primarily supports laptop devices. Using a mobile device or iPad may result in a less optimal experience. Accessing it through a Windows-based system for the best user experience."</p>
               <image src="images/cs299.gif" style="width: 100%;"></image>
               <div class="project-info">
                 <!-- <hr class="solid"> -->
                 <h2>Project Overview</h2>   
                 <p>Aquatic rush is a coin collecting game. The player will control the shark using the mouse. Players will have a total of 3 hearts. On the map there will be obstacles that the player must dodge while collecting coins that appear on the map.</p>
-                <h2>Development Process</h2> 
+                <h2>Development Note</h2> 
                 <p>Aquatic rush is a pair project that I did with a friend in the course CS299., which is a Computer graphics course. It is a project developed with TreeJS on javscript based on simulating a scene on an html page.</p>  
               </div>
               <image src="images/cs299-2.gif" style="width: 100%;"></image>
@@ -63,7 +67,8 @@
               </div>
               <image src="images/cs299-4.png" style="width: 100%;"></image>
               <div class="project-info">
-                <p>These are all models added to the project. All the models were made by Inkrak through Blender.</p>
+                <h2>Build Assets</h2> 
+                <p>These are all models added to the project. All the models were made by Inkrak through Blender. <a href="https://github.com/uninrk">click to see her repository.</a></p>
               </div>
             </div>
             <section id="section2"></section>
@@ -83,7 +88,7 @@
     
 
 </div>
-
+<section id="footer"></section>
 <div class="footer">
   <div class="contact">
     <h1>Contact me</h1>

@@ -35,6 +35,10 @@
     gap: 10%;
   }
 
+  .header .logo:hover {
+    cursor: pointer;
+  }
+
   .about-me {
     display: flex;
     gap: 5%;
@@ -111,7 +115,7 @@
   }
 
   .aside h2 {
-    margin-left: 3%;
+    text-align: center;
   }
 
   .aside p {
@@ -230,6 +234,8 @@
     padding: 5%;
   }
 
+  
+
   /* The typing effect */
   @keyframes typing {
     from { width: 0 }
@@ -241,6 +247,10 @@
   }
 
   /* SHOWCASE PAGE PROPERTY */
+
+  .topic {
+    font-size: 140% !important;
+  }
   .project-info {
     margin-top: 3%;
   }
@@ -253,10 +263,43 @@
 
   .project-info h2{
     margin-bottom: 2%;
+    font-size: 120% !important;
   }
 
   hr.solid {
     border-top: 2px solid #bbb;
+  }
+
+  .btn-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .such-a-btn:hover{
+    cursor: pointer;
+
+  }
+
+
+  .such-a-btn {
+    width: 120px;
+    padding: 2%;
+    color:#ffffff;
+    border-radius: 10px;
+    background-color: #55b0fb;
+    text-align: center;
+    animation: shine 3s linear infinite;
+    text-decoration: none;
+  }
+
+  .main .marks{
+    font-size: 80%;
+    color: #d3d3d3;
+  }
+
+  .project-info a{
+    color:cadetblue
   }
 
   
@@ -266,6 +309,9 @@
   }
 
   @media only screen and (min-width: 600px) {
+    .btn-flex{
+      justify-content: start;
+    }
     .fixed {
         top: 20px; 
         position: sticky;
